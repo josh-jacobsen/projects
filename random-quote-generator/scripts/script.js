@@ -1,3 +1,30 @@
+// function getQuote() {
+//    $.ajax({
+//        url: 'http://api.forismatic.com/api/1.0/',
+//        data: {
+//         method: 'getQuote',
+//         format: 'jsonp',
+//         lang: 'en',
+//         jsonp: 'parseQuote',
+//     },
+//     error: function() {
+//           //$('#info').html('<p>An error has occurred</p>');
+//           alert("error")
+//       },
+//       dataType: 'jsonp',
+//       jsonpCallback: 'parseQuote',
+//       success: function(data) {
+//          console.log(data.quoteText);
+//          $("#display-area").html(data.quoteText);
+//      },
+//      type: 'GET'
+
+
+
+//    });
+// }
+
+
 
 // +++++++++++++++++++++ CHUCK NORRIS ++++++++++++++++++++++++++++
 
@@ -126,23 +153,35 @@
 //     cache: false
 //   });
 // }
+function getQuote() {
+    $.ajax( {
+      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+      success: function(data) {
+        console.log(data);
+        var post = data.shift(); // The data is an array of posts. Grab the first one.
+        $('body').append(post.content);
+      },
+      cache: false
+    });
+}
+
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
 // // +++++++++++++++++++++ THEY SAID SO . COM (Doesn't Cycle ++++++++++++++++++++++++++++
 
 // +++++++++ xml Format  +++++++++++++++++++//
- function getQuote() {
-  var xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://quotes.rest/qod.xml", false);
-  xhr.send();
+//  function getQuote() {
+//   var xhr = new XMLHttpRequest();
+//   xhr.open("GET", "http://quotes.rest/qod.xml", false);
+//   xhr.send();
 
-  xmlDocument = xhr.responseXML;
-  txt = xmlDocument.getElementsByTagName("quote")[0].childNodes[0].nodeValue;
+//   xmlDocument = xhr.responseXML;
+//   txt = xmlDocument.getElementsByTagName("quote")[0].childNodes[0].nodeValue;
 
-  var display = document.getElementById("display-area");
-  display.innerHTML = txt;
-}
+//   var display = document.getElementById("display-area");
+//   display.innerHTML = txt;
+// }
 
 
 // +++++++++ JQUEIRY +++++++++++++++++++//
