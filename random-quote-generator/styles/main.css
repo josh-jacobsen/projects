@@ -7,8 +7,17 @@
 
 
 #display-area {
-  height: 400px;
-  width: 400px;
+  padding-top: 50px;
+  //height: 100px;
+  //width: 400px;
   //background-color: red;
   margin: 0 auto;
+}
+
+#author {
+  //height: 100px;
+  //width: 400px;
+  //background-color: red;
+  margin: 0 auto;
+
 }

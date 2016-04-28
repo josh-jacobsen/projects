@@ -1,3 +1,50 @@
+
+
+
+// function getQuote() {
+//   $.ajax({
+//       url: 'https://andruxnet-random-famous-quotes.p.mashape.com/', // The URL to the API. You can get this in the API page of the API you intend to consume
+//       type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+//       data: {}, // Additional parameters here
+//       dataType: 'json',
+//       success: function(data) {
+//         console.log(data);
+//         $("#display-area").html(data.quote);
+//         $("#author").html(data.author);
+//       },
+//       error: function(err) { alert(err); },
+//       beforeSend: function(xhr) {
+//         xhr.setRequestHeader("X-Mashape-Authorization", "ipUKzcbghrmsh1KZ4q8qfg3wH63Ep1Xte51jsn4x0FiSdr9Dm4"); // Enter here your Mashape key
+//       }
+//   });
+// }
+
+
+
+
+
+
+
+
+// function getQuote() {
+//   $.ajax({
+//      url: 'http://quotes.rest/qod.json',
+//      data: {
+//         format: 'json'
+//      },
+//      error: function() {
+//         $('#display-area').html('<p>An error has occurred</p>');
+//      },
+//      dataType: 'json',
+//      success: function(data) {
+//         console.log(data);
+//         console.log(data.contents.quotes[0].quote);
+//         $("#display-area").html(data.contents.quotes[0].quote);
+//      },
+//      type: 'GET'
+//   });
+// }
+
 // function getQuote() {
 //    $.ajax({
 //        url: 'http://api.forismatic.com/api/1.0/',
@@ -18,13 +65,8 @@
 //          $("#display-area").html(data.quoteText);
 //      },
 //      type: 'GET'
-
-
-
 //    });
 // }
-
-
 
 // +++++++++++++++++++++ CHUCK NORRIS ++++++++++++++++++++++++++++
 
@@ -62,6 +104,57 @@
 //      type: 'GET'
 //   });
 // }
+
+// // +++++++++++++++++++++ QUTOES ON DESIGN ++++++++++++++++++++++++++++
+// Needs server +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// function getQuote() {
+//     $.ajax( {
+//       url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+//       success: function(data) {
+//         console.log(data);
+//         var post = data.shift(); // The data is an array of posts. Grab the first one.
+//         $('#display-area').append(post.content);
+//       },
+//       cache: false
+//     });
+// }
+
+
+// // +++++++++++++++++++++ THEY SAID SO ++++++++++++++++++++++++++++
+
+// function getQuote() {
+//   $.ajax({
+//      url: 'http://quotes.rest/qod.json',
+//      data: {
+//         format: 'json'
+//      },
+//      error: function() {
+//         $('#display-area').html('<p>An error has occurred</p>');
+//      },
+//      dataType: 'json',
+//      success: function(data) {
+//         console.log(data);
+//         console.log(data.contents.quotes[0].quote);
+//         $("#display-area").html(data.contents.quotes[0].quote);
+//      },
+//      type: 'GET'
+//   });
+// }
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+
+
+
+
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
@@ -153,17 +246,7 @@
 //     cache: false
 //   });
 // }
-function getQuote() {
-    $.ajax( {
-      url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
-      success: function(data) {
-        console.log(data);
-        var post = data.shift(); // The data is an array of posts. Grab the first one.
-        $('body').append(post.content);
-      },
-      cache: false
-    });
-}
+
 
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
@@ -184,25 +267,7 @@ function getQuote() {
 // }
 
 
-// +++++++++ JQUEIRY +++++++++++++++++++//
 
-// function getQuote() {
-//   $.ajax({
-//      url: 'http://quotes.rest/qod.json',
-//      data: {
-//         format: 'json'
-//      },
-//      error: function() {
-//         $('#display-area').html('<p>An error has occurred</p>');
-//      },
-//      dataType: 'jsonp',
-//      success: function(data) {
-//         console.log(data);
-//         //$("#display-area").html(data.quote);
-//      },
-//      type: 'GET'
-//   });
-// }
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
 
